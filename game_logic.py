@@ -58,7 +58,20 @@ def play_game():
     display_game_state(mistakes, secret_word, guessed_letters)
 
     print(f"The snowman melted! The word was: {secret_word}")
+    replay()
+
+
+def replay():
+    is_replay = input("To replay? Enter 'yes': "
+                      "").lower()
+    if is_replay == "yes":
+        play_game()
+    else:
+        exit()
 
 
 if __name__ == "__main__":
     play_game()
+    replay()
+
+
